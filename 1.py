@@ -1,4 +1,4 @@
-#сбор данных о пикрейте и винрейте героев в патче 7.35
+#сбор данных о пикрейте и винрейте героев в патче 7.34
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import pandas as pd
 
 browser = webdriver.Chrome()
-URL_TEMPLATE = "https://www.dotabuff.com/heroes/winning?date=patch_7.35"
+URL_TEMPLATE = "https://www.dotabuff.com/heroes/winning?date=patch_7.34"
 browser.get(URL_TEMPLATE)
 tabel = browser.find_element(By.CSS_SELECTOR, 'table.sortable')
 rows = tabel.find_elements(By.TAG_NAME, 'tr')
